@@ -2,29 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background-color: #0f0e13;
+  background-image: radial-gradient(at 0% 0%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 50%),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.header {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-semibold text-white text-center mt-4 mb-4
+}
+
+.filters-container {
+  @apply flex flex-col sm:flex-row justify-between items-center px-4 mb-4
+}
+
+.filters {
+  @apply flex flex-col sm:flex-row items-center mb-4 sm:mb-0
+}
+
+.cart {
+  @apply text-white text-3xl
+}
+
+.cart-items {
+  @apply absolute top-0 right-0 -mt-2 -mr-2 bg-red-500 text-white w-6 h-6 flex items-center justify-center rounded-full text-xs
+}
+
+.product-list-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4
+}
+
+.product-card {
+  @apply bg-white p-4 rounded-md shadow-md flex flex-col transform hover:scale-105 transition-transform duration-300 cursor-pointer
+}
+
+
+.product-img {
+  @apply mb-2 rounded-md overflow-hidden flex items-center justify-center
+}
+
+.product-details {
+  @apply flex-1 flex flex-col items-center justify-center
+}
+
+.cta-button {
+  @apply mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition-colors duration-300
 }
