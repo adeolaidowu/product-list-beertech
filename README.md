@@ -11,4 +11,5 @@ Tailwind CSS
 clone the repository <br>
 cd into product-list-beertech <br>
 run npm install <br>
-run npm run dev
+run npm run dev <br>
+go to localhost:3000
