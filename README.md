@@ -8,7 +8,7 @@ Tailwind CSS
 
 
 #### Testing Steps
-clone the project <br>
+clone the repository <br>
 cd into product-list-beertech <br>
 run npm install <br>
-run npm run dev <br>
+run npm run dev
